@@ -5,12 +5,12 @@
 </script>
 
 <template>
-    <nav class="flex items-center justify-between flex-wrap p-6 border-b border-white border-opacity-20 uppercase">
-        <div class="flex font-antonio text-4xl">
+    <nav class="flex flex-row sm:max-lg:flex-col items-center justify-between  p-5 border-b border-white border-opacity-20 uppercase">
+        <div class="flex font-antonio text-3xl sm:text-4xl">
             The Planets
         </div>
         
-        <div class="flex flex-row text-gray text-sm">
+        <div class="hidden sm:flex flex-row text-gray text-sm">
             <a href="#responsive-header" class="p-3 block lg:inline-block lg:mt-0  hover:text-white">
                 Mercury
             </a>
@@ -36,6 +36,7 @@
                 Neptune
             </a>
         </div>
+        <img src="@/assets/icon-hamburger.svg" class="h-5 w-8 flex sm:hidden" alt="planet image" />
     </nav>
 </template>
 

@@ -7,7 +7,7 @@ import Planet from "./components/Planet.vue";
 
 <template>
   <div class="flex flex-col bg-no-repeat bg-cover w-full font-bold h-full stars bg-navy text-white text-base">
-    <NavBar class="h-24"/>
+    <NavBar class=""/>
     <Planet class=""/>
   </div>
 </template>

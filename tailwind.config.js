@@ -18,19 +18,22 @@ module.exports = {
       sans: ['League Spartan', 'sans-serif'],
     },
     fontSize: {
-      'xs': ['12px', {
+      'xs': ['11px', {
         lineHeight: '25px',
         letterSpacing: '1px',
         fontWeight: '700',
       }],
-      'sm': ['14px', {
+      'sm': ['12px', {
         lineHeight: '25px',
         letterSpacing: '2.6px',
         fontWeight: '700',
       }],
-      'base': ['16px', {
+      'base': ['14px', {
         lineHeight: '25px',
         fontWeight: '400'
+      }],
+      '3xl': ['30px', {
+        lineHeight: '36px',
       }],
       '4xl': ['40px', {
         lineHeight: '52px',
