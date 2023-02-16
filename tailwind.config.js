@@ -32,6 +32,9 @@ module.exports = {
         lineHeight: '25px',
         fontWeight: '400'
       }],
+      '2xl': ['24px', {
+        lineHeight: '32px',
+      }],
       '3xl': ['30px', {
         lineHeight: '36px',
       }],

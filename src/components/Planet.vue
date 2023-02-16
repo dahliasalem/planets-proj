@@ -24,9 +24,9 @@ async function searchWiki() {
 </script>
 
 <template>
-    <div class="flex flex-col h-full">
-        <div class="flex flex-col lg:flex-row images-and-text h-2/3 sm:h-5/6">
-            <div class="planet-space flex lg:w-4/6 justify-center self-center h-1/2 sm:h-2/3 lg:h-fit items-center">
+    <div class="flex flex-col grow">
+        <div class="flex flex-col lg:flex-row images-and-text lg:grow">
+            <div class="planet-space flex lg:w-4/6 justify-center self-center sm:h-2/3  items-center my-24">
                 <img src="@/assets/planet-mercury.svg" class="h-32 w-32" alt="planet image" />
             </div>
             <div class="text-space flex flex-col lg:w-2/6 justify-center mx-10 sm:mx-0">
@@ -56,22 +56,22 @@ async function searchWiki() {
             </div>
         </div>
         <div
-            class="info-section flex flex-col sm:flex-row sm:h-1/6 sm:mx-5 max-w-full sm:items-center">
-            <div class="flex flex-row md:flex-col border-white border-opacity-20 border sm:justify-center mx-10 sm:mx-0 items-center px-6 justify-between mb-3 sm:mr-3 md:py-4">
+            class="info-section flex flex-col sm:flex-row sm:mx-5 max-w-full sm:items-center justify-center my-10">
+            <div class="flex flex-row md:flex-col border-white border-opacity-20 border sm:justify-center mx-5 sm:mx-0 items-center px-4 justify-between mb-3 sm:mr-3 md:py-4">
                 <span class="uppercase text-sm text-gray"> Rotation Time</span>
-                <span class="uppercase text-3xl lg:text-4xl py-2 font-antonio"> 58.6 Days </span>
+                <span class="uppercase text-2xl lg:text-4xl py-2 font-antonio"> 58.6 Days </span>
             </div>
-            <div class="flex flex-row md:flex-col border-white border-opacity-20 border sm:justify-center mx-10 sm:mx-0 items-center px-6 justify-between mb-3 sm:mr-3">
+            <div class="flex flex-row md:flex-col border-white border-opacity-20 border sm:justify-center mx-5 sm:mx-0 items-center px-4 justify-between mb-3 sm:mr-3 md:py-4">
                 <span class="uppercase text-sm text-gray"> Revolution Time</span>
-                <span class="uppercase text-3xl lg:text-4xl py-2 font-antonio"> 58.6 Days </span>
+                <span class="uppercase text-2xl lg:text-4xl py-2 font-antonio"> 58.6 Days </span>
             </div>
-            <div class="flex flex-row md:flex-col border-white border-opacity-20 border sm:justify-center mx-10 sm:mx-0 items-center px-6 justify-between mb-3 sm:mr-3">
+            <div class="flex flex-row md:flex-col border-white border-opacity-20 border sm:justify-center mx-5 sm:mx-0 items-center px-4 justify-between mb-3 sm:mr-3 md:py-4">
                 <span class="uppercase text-sm text-gray"> Radius</span>
-                <span class="uppercase text-3xl lg:text-4xl py-2 font-antonio"> 58.6 Days </span>
+                <span class="uppercase text-2xl lg:text-4xl py-2 font-antonio"> 58.6 Days </span>
             </div>
-            <div class="flex flex-row md:flex-col border-white border-opacity-20 border sm:justify-center mx-10 sm:mx-0 items-center px-6 justify-between mb-3 sm:mr-3">
+            <div class="flex flex-row md:flex-col border-white border-opacity-20 border sm:justify-center mx-5 sm:mx-0 items-center px-4 justify-between mb-3 sm:mr-3 md:py-4">
                 <span class="uppercase text-sm text-gray"> Average Temp</span>
-                <span class="uppercase text-3xl lg:text-4xl py-2 font-antonio"> 58.6 Days </span>
+                <span class="uppercase text-2xl lg:text-4xl py-2 font-antonio"> 58.6 Days </span>
             </div>
         </div>
     </div>
