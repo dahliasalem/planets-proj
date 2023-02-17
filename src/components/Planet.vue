@@ -39,12 +39,12 @@ async function searchWiki() {
       </nav>
 
       <div
-        class="planet-space my-24 flex items-center justify-center self-center sm:h-2/3 lg:w-4/6"
+        class="planet-space my-auto flex items-center justify-center self-center sm:h-2/3 lg:w-4/6"
       >
-        <div class="w-full grow p-24 sm:p-10">
+        <div class="w-full grow p-24 sm:p-10 mx-auto">
           <img
-            src="@/assets/planet-mercury.svg"
-            class="object-fit mx-auto h-full w-full max-w-xs object-contain"
+            src="@/assets/planet-jupiter.svg"
+            class="mx-auto"
             alt="planet image"
           />
         </div>
