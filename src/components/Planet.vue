@@ -104,7 +104,7 @@ async function searchWiki() {
       <div
         class="mr-2  flex flex-row items-center justify-between border border-white border-opacity-20 px-4 sm:flex-col py-2 md:py-4 lg:pr-20 mb-3"
       >
-        <span class="text-sm uppercase text-gray"> Rotation Time</span>
+        <span class="text-sm uppercase text-gray self-center sm:self-start"> Rotation Time</span>
         <span class="font-antonio text-2xl uppercase lg:text-4xl">
           538.46 Days
         </span>
@@ -112,7 +112,7 @@ async function searchWiki() {
       <div
         class="mr-2  flex flex-row items-center justify-between border border-white border-opacity-20 px-4 sm:flex-col py-2 md:py-4 lg:pr-20 mb-3"
       >
-        <span class="text-sm uppercase text-gray"> Revolution Time</span>
+        <span class="text-sm uppercase text-gray self-center sm:self-start"> Revolution Time</span>
         <span class="font-antonio text-2xl uppercase lg:text-4xl">
           538.46 Days
         </span>
@@ -128,7 +128,7 @@ async function searchWiki() {
       <div
         class="mr-2  flex flex-row items-center justify-between border border-white border-opacity-20 px-4 sm:flex-col py-2 md:py-4 lg:pr-20 mb-3"
       >
-        <span class="text-sm uppercase text-gray"> Average Temp</span>
+        <span class="text-sm uppercase text-gray self-center sm:self-start"> Average Temp</span>
         <span class="font-antonio text-2xl uppercase lg:text-4xl">
           538.46 Days
         </span>
