@@ -5,8 +5,8 @@
 </script>
 
 <template>
-    <nav class="flex flex-row sm:max-lg:flex-col items-center justify-between  p-5 border-b border-white border-opacity-20 uppercase">
-        <div class="flex font-antonio text-3xl sm:text-4xl">
+    <nav class="flex flex-row sm:max-lg:flex-col items-center justify-between border-b border-white border-opacity-20 uppercase">
+        <div class="flex font-antonio text-3xl sm:text-4xl p-5">
             The Planets
         </div>
         
@@ -36,7 +36,7 @@
                 Neptune
             </a>
         </div>
-        <img src="@/assets/icon-hamburger.svg" class="h-5 w-8 flex sm:hidden" alt="planet image" />
+        <img src="@/assets/icon-hamburger.svg" class="h-5 w-8 flex sm:hidden pr-4" alt="planet image" />
     </nav>
 </template>
 
