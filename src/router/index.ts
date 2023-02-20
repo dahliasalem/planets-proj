@@ -1,3 +1,4 @@
+import PlanetVue from "@/components/Planet.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
@@ -6,17 +7,72 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: HomeView,
+      redirect: "/mercury"
     },
     {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
+      path: "/mercury",
+      name: "mercury",
+      component: PlanetVue,
+      props: {
+        wikiId: "Mercury_(planet)",
+      }
     },
+    {
+      path: "/venus",
+      name: "venus",
+      component: PlanetVue,
+      props: {
+        wikiId: "Venus",
+      }
+    },
+    {
+      path: "/earth",
+      name: "earth",
+      component: PlanetVue,
+      props: {
+        wikiId: "Earth",
+      }
+    },
+    {
+      path: "/mars",
+      name: "mars",
+      component: PlanetVue,
+      props: {
+        wikiId: "Mars",
+      }
+    },
+    {
+      path: "/jupiter",
+      name: "jupiter",
+      component: PlanetVue,
+      props: {
+        wikiId: "Jupiter",
+      }
+    },
+    {
+      path: "/saturn",
+      name: "saturn",
+      component: PlanetVue,
+      props: {
+        wikiId: "Saturn",
+      }
+    },
+    {
+      path: "/uranus",
+      name: "uranus",
+      component: PlanetVue,
+      props: {
+        wikiId: "Uranus",
+      }
+    },
+    {
+      path: "/neptune",
+      name: "neptune",
+      component: PlanetVue,
+      props: {
+        wikiId: "Neptune",
+      }
+    }
   ],
 });
 

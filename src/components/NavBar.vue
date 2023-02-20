@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { RouterLink, RouterView } from "vue-router";
+
 // defineProps<{
 //     msg: string;
 // }>();
@@ -11,30 +13,14 @@
         </div>
         
         <div class="hidden sm:flex flex-row text-gray text-sm">
-            <a href="#responsive-header" class="p-3 block lg:inline-block lg:mt-0  hover:text-white">
-                Mercury
-            </a>
-            <a href="#responsive-header" class="p-3 block lg:inline-block lg:mt-0  hover:text-white">
-                Venus
-            </a>
-            <a href="#responsive-header" class="p-3 block lg:inline-block lg:mt-0  hover:text-white">
-                Earth
-            </a>
-            <a href="#responsive-header" class="p-3 block lg:inline-block lg:mt-0  hover:text-white">
-                Mars
-            </a>
-            <a href="#responsive-header" class="p-3 block lg:inline-block lg:mt-0  hover:text-white">
-                Jupiter
-            </a>
-            <a href="#responsive-header" class="p-3 block lg:inline-block lg:mt-0  hover:text-white">
-                Saturn
-            </a>
-            <a href="#responsive-header" class="p-3 block lg:inline-block lg:mt-0  hover:text-white">
-                Uranus
-            </a>
-            <a href="#responsive-header" class="p-3 block lg:inline-block lg:mt-0  hover:text-white">
-                Neptune
-            </a>
+            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/mercury">Mercury</router-link>
+            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/venus">Venus</router-link>
+            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/earth">Earth</router-link>
+            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/mars">Mars</router-link>
+            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/jupiter">Jupiter</router-link>
+            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/saturn">Saturn</router-link>
+            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/uranus">Uranus</router-link>
+            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/neptune">Neptune</router-link>
         </div>
         <img src="@/assets/icon-hamburger.svg" class="h-5 w-8 flex sm:hidden pr-4" alt="planet image" />
     </nav>
