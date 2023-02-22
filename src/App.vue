@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
+import { onMounted } from "vue";
+import { RouterView } from "vue-router";
 import NavBar from "./components/NavBar.vue";
-import Planet from "./components/Planet.vue";
+import { usePlanetStore } from "./store/planet";
+const store = usePlanetStore();
+
+onMounted(async () => {
+  await store.fetchPlanetData();
+})
 
 </script>
 
