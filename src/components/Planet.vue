@@ -99,7 +99,7 @@ async function searchWiki() {
         </div>
       </div>
       <div
-        class="text-space mx-10 my-16 flex flex-col justify-center sm:mx-0 lg:w-2/6"
+        class="text-space mx-10 lg:my-16 flex flex-col justify-center sm:mx-0 lg:w-2/6"
       >
         <div
           class="text-and-buttons flex flex-col sm:flex-row lg:w-3/4 lg:flex-col"

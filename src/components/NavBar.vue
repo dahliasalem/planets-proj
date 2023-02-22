@@ -1,31 +1,74 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-
-// defineProps<{
-//     msg: string;
-// }>();
+import { RouterLink, useRouter } from "vue-router";
+import { useRoute } from "vue-router";
+const route = useRoute();
+function isCurrentRoute(r: string) {
+  return r === route.name;
+}
 </script>
 
 <template>
-    <nav class="flex flex-row sm:max-lg:flex-col items-center justify-between border-b border-white border-opacity-20 uppercase">
-        <div class="flex font-antonio text-3xl sm:text-4xl p-5">
-            The Planets
-        </div>
-        
-        <div class="hidden sm:flex flex-row text-gray text-sm">
-            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/mercury">Mercury</router-link>
-            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/venus">Venus</router-link>
-            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/earth">Earth</router-link>
-            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/mars">Mars</router-link>
-            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/jupiter">Jupiter</router-link>
-            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/saturn">Saturn</router-link>
-            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/uranus">Uranus</router-link>
-            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white" to="/neptune">Neptune</router-link>
-        </div>
-        <img src="@/assets/icon-hamburger.svg" class="h-5 w-8 flex sm:hidden pr-4" alt="planet image" />
-    </nav>
+  <nav
+    class="flex flex-row items-center justify-between border-b border-white border-opacity-20 uppercase sm:max-lg:flex-col"
+  >
+    <div class="flex p-5 font-antonio text-3xl sm:text-4xl">The Planets</div>
+
+    <div class="hidden flex-row text-sm text-gray sm:flex">
+      <router-link
+        class="block border-t-4 border-t-light-blue border-opacity-0 p-3 py-8 hover:border-opacity-100 hover:text-white focus:text-white lg:mt-0 lg:inline-block"
+        :class="isCurrentRoute('mercury') ? 'border-opacity-100' : ''"
+        to="/mercury"
+        >Mercury</router-link
+      >
+      <router-link
+        class="block border-t-4 border-t-yellow border-opacity-0 p-3 py-8 hover:border-opacity-100 hover:text-white focus:text-white lg:mt-0 lg:inline-block"
+        :class="isCurrentRoute('venus') ? 'border-opacity-100' : ''"
+        to="/venus"
+        >Venus</router-link
+      >
+      <router-link
+        class="block border-t-4 border-t-blue border-opacity-0 p-3 py-8 hover:border-opacity-100 hover:text-white focus:text-white lg:mt-0 lg:inline-block"
+        :class="isCurrentRoute('earth') ? 'border-opacity-100' : ''"
+        to="/earth"
+        >Earth</router-link
+      >
+      <router-link
+        class="block border-t-4 border-red border-opacity-0 p-3 py-8 hover:border-opacity-100 hover:text-white focus:text-white lg:mt-0 lg:inline-block"
+        :class="isCurrentRoute('mars') ? 'border-opacity-100' : ''"
+        to="/mars"
+        >Mars</router-link
+      >
+      <router-link
+        class="block border-t-4 border-t-orange border-opacity-0 p-3 py-8 hover:border-opacity-100 hover:text-white focus:text-white lg:mt-0 lg:inline-block"
+        :class="isCurrentRoute('jupiter') ? 'border-opacity-100' : ''"
+        to="/jupiter"
+        >Jupiter</router-link
+      >
+      <router-link
+        class="block border-t-4 border-t-yellow border-opacity-0 p-3 py-8 hover:border-opacity-100 hover:text-white focus:text-white lg:mt-0 lg:inline-block"
+        :class="isCurrentRoute('saturn') ? 'border-opacity-100' : ''"
+        to="/saturn"
+        >Saturn</router-link
+      >
+      <router-link
+        class="block border-t-4 border-t-mint border-opacity-0 p-3 py-8 hover:border-opacity-100 hover:text-white focus:text-white lg:mt-0 lg:inline-block"
+        :class="isCurrentRoute('uranus') ? 'border-opacity-100' : ''"
+        to="/uranus"
+        >Uranus</router-link
+      >
+      <router-link
+        class="block border-t-4 border-t-blue border-opacity-0 p-3 py-8 hover:border-opacity-100 hover:text-white focus:text-white lg:mt-0 lg:inline-block"
+        :class="isCurrentRoute('neptune') ? 'border-opacity-100' : ''"
+        to="/neptune"
+        >Neptune</router-link
+      >
+    </div>
+    <img
+      src="@/assets/icon-hamburger.svg"
+      class="flex h-5 w-8 pr-4 sm:hidden"
+      alt="planet image"
+    />
+  </nav>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
