@@ -17,7 +17,8 @@ function getImage() {
   if (route.hash == "#structure") {
     image = props.planet.image.structure;
   }
-  return `/src/assets/${image}.svg`;
+  const imgUrl = new URL(`/src/assets/${image}.svg`, import.meta.url).href
+  return imgUrl;
 }
 
 function getDisplayText() {
