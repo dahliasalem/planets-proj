@@ -9,56 +9,52 @@ import Uranus from "../views/Uranus.vue";
 import Neptune from "../views/Neptune.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(process.env.NODE_ENV === 'production' ? '/planets-proj/' : '/'),
   routes: [
     {
-      path: "/planets-proj/mercury",
+      path: "/mercury",
       name: "mercury",
       component: Mercury,
-      alias: "/planets-proj/",
+      alias: "/",
     },
     {
-      path: "/planets-proj/venus",
+      path: "/venus",
       name: "venus",
       component: Venus,
     },
     {
-      path: "/planets-proj/earth",
+      path: "/earth",
       name: "earth",
       component: Earth,
     },
     {
-      path: "/planets-proj/mars",
+      path: "/mars",
       name: "mars",
       component: Mars,
     },
     {
-      path: "/planets-proj/jupiter",
+      path: "/jupiter",
       name: "jupiter",
       component: Jupiter,
     },
     {
-      path: "/planets-proj/saturn",
+      path: "/saturn",
       name: "saturn",
       component: Saturn,
     },
     {
-      path: "/planets-proj/uranus",
+      path: "/uranus",
       name: "uranus",
       component: Uranus,
     },
     {
-      path: "/planets-proj/neptune",
+      path: "/neptune",
       name: "neptune",
       component: Neptune,
     },
     {
-      path: '/planets-proj/:pathMatch(.*)*',
-      redirect:'/planets-proj/'
-    },
-    {
       path: '/:pathMatch(.*)*',
-      redirect:'/planets-proj/'
+      redirect:'mercury'
     }
   ],
 });
