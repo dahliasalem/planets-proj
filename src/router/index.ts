@@ -52,6 +52,10 @@ const router = createRouter({
       name: "neptune",
       component: Neptune,
     },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect:'mercury'
+    }
   ],
 });
 

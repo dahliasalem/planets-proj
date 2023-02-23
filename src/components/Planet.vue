@@ -83,7 +83,7 @@ function isSelected(hash: string) {
         <div class="mx-auto w-full grow p-24 sm:p-10">
           <img
             :src="getImage()"
-            class="mx-auto sm:max-w-md lg:max-w-xl"
+            class="mx-auto sm:max-w-md lg:max-w-xl z-0"
             alt="planet image"
           />
         </div>
