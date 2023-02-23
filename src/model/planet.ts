@@ -3,7 +3,7 @@ export class Planet {
   image: any;
   numbers: any;
 
-  constructor(imgOverview: any, imgStruc: any, imgSurface: any) {
+  constructor(imgOverview: any, imgStruc: any) {
     this.info = {
       overview: "",
       structure: "",
@@ -12,7 +12,6 @@ export class Planet {
     this.image = {
       overview: imgOverview,
       structure: imgStruc,
-      surface: imgSurface,
     };
     this.numbers = {
       rotationTime: "8435",

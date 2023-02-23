@@ -10,22 +10,22 @@ const WIKI_SECTIONS =
 
 export const usePlanetStore = defineStore("planet", () => {
   const mercury = ref(
-    new Planet("planet-mercury", "planet-mercury-internal", "ferfer")
+    new Planet("planet-mercury", "planet-mercury-internal")
   );
-  const venus = ref(new Planet("planet-venus", "planet-venus-internal", "efe"));
-  const earth = ref(new Planet("planet-earth", "planet-earth-internal", "efe"));
-  const mars = ref(new Planet("planet-mars", "planet-mars-internal", "efe"));
+  const venus = ref(new Planet("planet-venus", "planet-venus-internal"));
+  const earth = ref(new Planet("planet-earth", "planet-earth-internal"));
+  const mars = ref(new Planet("planet-mars", "planet-mars-internal"));
   const jupiter = ref(
-    new Planet("planet-jupiter", "planet-jupiter-internal", "efe")
+    new Planet("planet-jupiter", "planet-jupiter-internal")
   );
   const saturn = ref(
-    new Planet("planet-saturn", "planet-saturn-internal", "efe")
+    new Planet("planet-saturn", "planet-saturn-internal")
   );
   const uranus = ref(
-    new Planet("planet-uranus", "planet-uranus-internal", "efe")
+    new Planet("planet-uranus", "planet-uranus-internal")
   );
   const neptune = ref(
-    new Planet("planet-neptune", "planet-neptune-internal", "efe")
+    new Planet("planet-neptune", "planet-neptune-internal")
   );
 
   async function fetchPlanetData() {
@@ -89,7 +89,9 @@ export const usePlanetStore = defineStore("planet", () => {
     for (const section of sections) {
       if (
         section.anchor == "Surface_geology" ||
-        section.anchor == "Geography"
+        section.anchor == "Geography" ||
+        section.anchor == "Atmosphere" ||
+        section.anchor == "Size and shape"
       ) {
         const $ = cheerio.load(section.text);
         const $p = $("p:first");

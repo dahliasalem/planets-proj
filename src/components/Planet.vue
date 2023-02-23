@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import { defineProps, onMounted } from "vue";
+import { defineProps } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
-interface Planet {
-  info: Object;
-  image: Object;
-  numbers: Object;
-}
 const route = useRoute();
 const router = useRouter();
 const props = withDefaults(
@@ -21,9 +16,6 @@ function getImage() {
   let image = props.planet.image.overview;
   if (route.hash == "#structure") {
     image = props.planet.image.structure;
-  }
-  if (route.hash == "#surface") {
-    image = props.planet.image.surface;
   }
   return `/src/assets/${image}.svg`;
 }
@@ -64,9 +56,24 @@ function isSelected(hash: string) {
       <nav
         class="flex flex-row items-center justify-around border-b border-white border-opacity-20 py-3 px-4 uppercase sm:hidden"
       >
-        <a class="hover:text-white lg:mt-0 lg:inline-block"> Overview </a>
-        <a class="hover:text-white lg:mt-0 lg:inline-block"> Structure </a>
-        <a class="hover:text-white lg:mt-0 lg:inline-block"> Surface </a>
+        <a
+          class="hover:text-white lg:mt-0 lg:inline-block"
+          @click="routeOverview()"
+        >
+          Overview
+        </a>
+        <a
+          class="hover:text-white lg:mt-0 lg:inline-block"
+          @click="routeStructure()"
+        >
+          Structure
+        </a>
+        <a
+          class="hover:text-white lg:mt-0 lg:inline-block"
+          @click="routeSurface()"
+        >
+          Surface
+        </a>
       </nav>
 
       <div

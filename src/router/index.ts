@@ -1,4 +1,3 @@
-import PlanetVue from "@/components/Planet.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import Mercury from "../views/Mercury.vue";
 import Venus from "../views/Venus.vue";
