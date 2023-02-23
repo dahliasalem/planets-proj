@@ -9,7 +9,7 @@ import Uranus from "../views/Uranus.vue";
 import Neptune from "../views/Neptune.vue";
 
 const router = createRouter({
-  history: createWebHistory(process.env.NODE_ENV === 'production' ? '/planets-proj/' : '/'),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/mercury",

@@ -14,5 +14,5 @@ export default defineConfig({
   build: {
     outDir: "docs/"
   },
-  base: process.env.NODE_ENV === 'production' ? '/planets-proj/' : '/'
+  // base: process.env.NODE_ENV === 'production' ? '/planets-proj/' : '/'
 });
