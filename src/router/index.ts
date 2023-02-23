@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory, createWebHashHistory} from "vue-router";
 import Mercury from "../views/Mercury.vue";
 import Venus from "../views/Venus.vue";
 import Earth from "../views/Earth.vue";
@@ -9,7 +9,7 @@ import Uranus from "../views/Uranus.vue";
 import Neptune from "../views/Neptune.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/mercury",
