@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import axios from "axios";
-import { ref, onMounted, defineProps, reactive, computed } from "vue";
-import { useRouter, useRoute } from "vue-router";
+import { ref, onMounted, defineProps, reactive, computed, watch} from "vue";
+import { useRouter, useRoute, onBeforeRouteUpdate } from "vue-router";
 import * as cheerio from 'cheerio';
+import { usePlanetStore } from "../store/planet";
 
 
 const summary = ref("");
 const route = useRoute();
+const store = usePlanetStore();
 const props = withDefaults(
   defineProps<{
     wikiId: string;
@@ -14,9 +16,25 @@ const props = withDefaults(
   {}
 );
 
+watch(route, async (c, o) => {
+  console.log("i have changed");
+  await searchWiki();
+});
+
+
 const image = computed(() => {
   return `/src/assets/planet-${route.name?.toString()}.svg`;
 });
+
+// const text = computed(async() => {
+//   if(route.hash == "#structure"){
+//     return await store.fetchPlanetStructure(props.wikiId);
+//   }
+//   if(route.hash == "#surface"){
+//     return await store.fetchPlanetSurface(props.wikiId);
+//   }
+//   return await store.fetchPlanetOverview(props.wikiId);
+// });
 
 onMounted(() => {
   searchWiki();
@@ -64,6 +82,7 @@ async function getSurface() {
 
 
 async function searchWiki() {
+  console.log("search wiki calledr")
   let planetName = encodeURIComponent(props.wikiId);
   let endpoint =
     `https://en.wikipedia.org/api/rest_v1/page/summary/` + planetName;

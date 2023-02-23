@@ -4,9 +4,10 @@ import { createRouter, createWebHistory } from "vue-router";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // { path: '*', redirect: '/mercury' },
     {
       path: "/",
-      redirect: "/mercury"
+      redirect: "/mercury",
     },
     {
       path: "/mercury",
@@ -14,7 +15,7 @@ const router = createRouter({
       component: PlanetVue,
       props: {
         wikiId: "Mercury_(planet)",
-      }
+      },
     },
     {
       path: "/venus",
@@ -22,7 +23,7 @@ const router = createRouter({
       component: PlanetVue,
       props: {
         wikiId: "Venus",
-      }
+      },
     },
     {
       path: "/earth",
@@ -30,7 +31,7 @@ const router = createRouter({
       component: PlanetVue,
       props: {
         wikiId: "Earth",
-      }
+      },
     },
     {
       path: "/mars",
@@ -38,7 +39,7 @@ const router = createRouter({
       component: PlanetVue,
       props: {
         wikiId: "Mars",
-      }
+      },
     },
     {
       path: "/jupiter",
@@ -46,7 +47,7 @@ const router = createRouter({
       component: PlanetVue,
       props: {
         wikiId: "Jupiter",
-      }
+      },
     },
     {
       path: "/saturn",
@@ -54,7 +55,7 @@ const router = createRouter({
       component: PlanetVue,
       props: {
         wikiId: "Saturn",
-      }
+      },
     },
     {
       path: "/uranus",
@@ -62,7 +63,7 @@ const router = createRouter({
       component: PlanetVue,
       props: {
         wikiId: "Uranus",
-      }
+      },
     },
     {
       path: "/neptune",
@@ -70,8 +71,9 @@ const router = createRouter({
       component: PlanetVue,
       props: {
         wikiId: "Neptune",
-      }
-    }
+      },
+    },
+    { path: "/:pathMatch(.*)*", redirect: "/mercury" },
   ],
 });
 
