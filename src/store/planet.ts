@@ -90,6 +90,7 @@ export const usePlanetStore = defineStore("planet", () => {
       if (
         section.anchor == "Surface_geology" ||
         section.anchor == "Geography" ||
+        section.anchor == "Composition" ||
         section.anchor == "Atmosphere" ||
         section.anchor == "Size and shape"
       ) {
