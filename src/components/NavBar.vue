@@ -3,19 +3,10 @@ import { RouterLink, RouterView, useRouter } from "vue-router";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
-const router = useRouter();
 
 function isCurrentRoute(r :string) {
     return r === route.name;
 }
-
-function goMerc(){
-    router.push({name: 'mercury', replace: true})
-}
-
-// defineProps<{
-//     msg: string;
-// }>();
 </script>
 
 <template>
@@ -25,7 +16,7 @@ function goMerc(){
         </div>
         
         <div class="hidden sm:flex flex-row text-gray text-sm pr-4">
-            <a class="p-3 block lg:inline-block lg:mt-0  hover:text-white focus:text-white py-8 border-t-4 border-t-light-blue border-opacity-0 hover:border-opacity-100" :class="isCurrentRoute('mercury') ? 'border-opacity-100':''" to="/mercury" @click="goMerc">Mercury</a>
+            <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white focus:text-white py-8 border-t-4 border-t-light-blue border-opacity-0 hover:border-opacity-100" :class="isCurrentRoute('mercury') ? 'border-opacity-100':''" to="/mercury">Mercury</router-link>
             <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white focus:text-white py-8 border-t-4 border-t-yellow border-opacity-0 hover:border-opacity-100" :class="isCurrentRoute('venus') ? 'border-opacity-100':''" to="/venus">Venus</router-link>
             <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white focus:text-white py-8 border-t-4 border-t-blue border-opacity-0 hover:border-opacity-100" :class="isCurrentRoute('earth') ? 'border-opacity-100':''" to="/earth">Earth</router-link>
             <router-link class="p-3 block lg:inline-block lg:mt-0  hover:text-white focus:text-white py-8 border-t-4 border-red border-opacity-0 hover:border-opacity-100" :class="isCurrentRoute('mars') ? 'border-opacity-100':''" to="/mars">Mars</router-link>
