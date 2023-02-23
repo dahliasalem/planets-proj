@@ -2,47 +2,40 @@
 import { defineProps, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
+interface Planet {
+  info: Object;
+  image: Object;
+  numbers: Object;
+}
 const route = useRoute();
 const router = useRouter();
 const props = withDefaults(
   defineProps<{
-    overview: string;
-    structure: string;
-    surface: string;
-    overviewImage: string;
-    structureImage: string;
-    surfaceImage: string;
-    rotationTime: string;
-    revolutionTime: string;
-    radius: string;
-    averageTemp: string;
+    planet: any;
     bgColor: string;
   }>(),
   {}
 );
 
-onMounted(() => {
-  console.log("planet mounted")
-})
-
 function getImage() {
-  // if (route.hash == "#structure") {
-  //   return props.structureImage;
-  // }
-  // if (route.hash == "#surface") {
-  //   return props.surfaceImage;
-  // }
-  return props.overviewImage;
+  let image = props.planet.image.overview;
+  if (route.hash == "#structure") {
+    image = props.planet.image.structure;
+  }
+  if (route.hash == "#surface") {
+    image = props.planet.image.surface;
+  }
+  return `/src/assets/${image}.svg`;
 }
 
 function getDisplayText() {
   if (route.hash == "#structure") {
-    return props.structure;
+    return props.planet.info.structure;
   }
   if (route.hash == "#surface") {
-    return props.surface;
+    return props.planet.info.surface;
   }
-  return props.overview;
+  return props.planet.info.overview;
 }
 
 function routeOverview() {
@@ -81,7 +74,7 @@ function isSelected(hash: string) {
       >
         <div class="mx-auto w-full grow p-24 sm:p-10">
           <img
-            src="/src/assets/planet-mercury.svg"
+            :src="getImage()"
             class="mx-auto sm:max-w-md lg:max-w-xl"
             alt="planet image"
           />

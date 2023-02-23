@@ -2,36 +2,47 @@ import { defineStore } from "pinia";
 import { ref } from "vue";
 import axios from "axios";
 import * as cheerio from "cheerio";
+import { Planet } from "../model/planet";
 
 const WIKI_SUMMARY = "https://en.wikipedia.org/api/rest_v1/page/summary/";
-const WIKI_SECTIONS = "https://en.wikipedia.org/api/rest_v1/page/mobile-sections/";
+const WIKI_SECTIONS =
+  "https://en.wikipedia.org/api/rest_v1/page/mobile-sections/";
 
 export const usePlanetStore = defineStore("planet", () => {
-  const mercury = ref({
-    title: '',
-    overview: '',
-    structure: '',
-    surface: '',
-  });
-  const venus = ref({
-    title: '',
-    overview: '',
-    structure: '',
-    surface: '',
-  });
-  
-  async function fetchPlanetData(){
-    mercury.value = {
-      title: 'Mercury',
-      overview: await fetchPlanetOverview("Mercury_(planet)"),
-      structure: await fetchPlanetStructure("Mercury_(planet)"),
-      surface: await fetchPlanetSurface("Mercury_(planet)")
-    };
-    venus.value = {
-      title: 'Venus',
-      overview: await fetchPlanetOverview("Venus"),
-      structure: await fetchPlanetStructure("Venus"),
-      surface: await fetchPlanetSurface("Venus")
+  const mercury = ref(
+    new Planet("planet-mercury", "planet-mercury-internal", "ferfer")
+  );
+  const venus = ref(new Planet("planet-venus", "planet-venus-internal", "efe"));
+  const earth = ref(new Planet("planet-earth", "planet-earth-internal", "efe"));
+  const mars = ref(new Planet("planet-mars", "planet-mars-internal", "efe"));
+  const jupiter = ref(
+    new Planet("planet-jupiter", "planet-jupiter-internal", "efe")
+  );
+  const saturn = ref(
+    new Planet("planet-saturn", "planet-saturn-internal", "efe")
+  );
+  const uranus = ref(
+    new Planet("planet-uranus", "planet-uranus-internal", "efe")
+  );
+  const neptune = ref(
+    new Planet("planet-neptune", "planet-neptune-internal", "efe")
+  );
+
+  async function fetchPlanetData() {
+    mercury.value.info = await fetchPlanetInfo("Mercury_(planet)");
+    venus.value.info = await fetchPlanetInfo("Venus");
+    earth.value.info = await fetchPlanetInfo("Earth");
+    mars.value.info = await fetchPlanetInfo("Mars");
+    jupiter.value.info = await fetchPlanetInfo("Jupiter");
+    saturn.value.info = await fetchPlanetInfo("Saturn");
+    uranus.value.info = await fetchPlanetInfo("Uranus");
+    neptune.value.info = await fetchPlanetInfo("Neptune");
+  }
+  async function fetchPlanetInfo(wikiId: string) {
+    return {
+      overview: await fetchPlanetOverview(wikiId),
+      structure: await fetchPlanetStructure(wikiId),
+      surface: await fetchPlanetSurface(wikiId),
     };
   }
   async function fetchPlanetOverview(wikiId: string) {
@@ -76,7 +87,10 @@ export const usePlanetStore = defineStore("planet", () => {
     }
     let sections = res.data.remaining.sections;
     for (const section of sections) {
-      if (section.anchor == "Surface_geology") {
+      if (
+        section.anchor == "Surface_geology" ||
+        section.anchor == "Geography"
+      ) {
         const $ = cheerio.load(section.text);
         const $p = $("p:first");
         return $p.text();
@@ -86,11 +100,14 @@ export const usePlanetStore = defineStore("planet", () => {
   }
 
   return {
-    fetchPlanetOverview,
-    fetchPlanetStructure,
-    fetchPlanetSurface,
     fetchPlanetData,
     mercury,
-    venus
+    venus,
+    earth,
+    mars,
+    jupiter,
+    saturn,
+    uranus,
+    neptune,
   };
 });
