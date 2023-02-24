@@ -3,8 +3,7 @@
 A beautiful responsive website to display facts about all the planets in our universe.
 Mobile friendly, and queries all data from the Wikipedia API.
 
-**LIVE DEMO:** [https://planets-proj.vercel.app/](https://planets-proj.vercel.app/)
-
+**LIVE DEMO:** <a href="https://planets-proj.vercel.app/" target="_blank">https://planets-proj.vercel.app/</a>
 
 
 Developr Tools: VSCODE, git, github, linux terminal, bash, npm, eslint, Prettir
