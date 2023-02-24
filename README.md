@@ -6,7 +6,7 @@ Mobile friendly, and queries all data from the Wikipedia API.
 **LIVE DEMO:** <a href="https://planets-proj.vercel.app/" target="_blank">https://planets-proj.vercel.app/</a>
 
 
-Developr Tools: VSCODE, git, github, linux terminal, bash, npm, eslint, Prettir
+Developr Tools: VSCODE, git, github, linux terminal, bash, npm, eslint, Prettier
 
 Frameworks & Languges: Vue.js 3 (Compositions API), Typescript, Flex CSS, Node js
 
