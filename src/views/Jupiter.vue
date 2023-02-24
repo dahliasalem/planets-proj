@@ -11,6 +11,12 @@ const { jupiter } = storeToRefs(usePlanetStore());
     :planet="jupiter"
     bg-color="bg-yellow"
     wiki-link="https://en.wikipedia.org/wiki/Jupiter"
+    overview-img="planet-jupiter"
+    internal-img="planet-jupiter-internal"
+    rotation-days="9.93"
+    rev-time="11.86"
+    radius="69,911"
+    avg-temp="-108"
   ></Planet>
 </template>
 

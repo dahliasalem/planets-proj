@@ -1,17 +1,25 @@
-export class Planet {
-  info: any;
-  image: any;
-  numbers: any;
+type Info = {
+  overview: string;
+  structure: string;
+  surface: string;
+};
 
-  constructor(imgOverview: any, imgStruc: any) {
+type Numbers = {
+  rotationTime: string;
+  revolutionTime: string;
+  radius: string;
+  averageTemp: string;
+};
+
+export class Planet {
+  info: Info;
+  numbers: Numbers;
+
+  constructor() {
     this.info = {
       overview: "",
       structure: "",
       surface: "",
-    };
-    this.image = {
-      overview: imgOverview,
-      structure: imgStruc,
     };
     this.numbers = {
       rotationTime: "8435",

@@ -9,24 +9,14 @@ const WIKI_SECTIONS =
   "https://en.wikipedia.org/api/rest_v1/page/mobile-sections/";
 
 export const usePlanetStore = defineStore("planet", () => {
-  const mercury = ref(
-    new Planet("planet-mercury", "planet-mercury-internal")
-  );
-  const venus = ref(new Planet("planet-venus", "planet-venus-internal"));
-  const earth = ref(new Planet("planet-earth", "planet-earth-internal"));
-  const mars = ref(new Planet("planet-mars", "planet-mars-internal"));
-  const jupiter = ref(
-    new Planet("planet-jupiter", "planet-jupiter-internal")
-  );
-  const saturn = ref(
-    new Planet("planet-saturn", "planet-saturn-internal")
-  );
-  const uranus = ref(
-    new Planet("planet-uranus", "planet-uranus-internal")
-  );
-  const neptune = ref(
-    new Planet("planet-neptune", "planet-neptune-internal")
-  );
+  const mercury = ref(new Planet());
+  const venus = ref(new Planet());
+  const earth = ref(new Planet());
+  const mars = ref(new Planet());
+  const jupiter = ref(new Planet());
+  const saturn = ref(new Planet());
+  const uranus = ref(new Planet());
+  const neptune = ref(new Planet());
 
   async function fetchPlanetData() {
     mercury.value.info = await fetchPlanetInfo("Mercury_(planet)");
@@ -86,6 +76,8 @@ export const usePlanetStore = defineStore("planet", () => {
       throw Error(res.statusText);
     }
     let sections = res.data.remaining.sections;
+    console.log("sections");
+    console.log(sections);
     for (const section of sections) {
       if (
         section.anchor == "Surface_geology" ||

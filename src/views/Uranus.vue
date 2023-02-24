@@ -11,6 +11,12 @@ const { uranus } = storeToRefs(usePlanetStore());
     :planet="uranus"
     bg-color="bg-mint"
     wiki-link="https://en.wikipedia.org/wiki/Uranus"
+    overview-img="planet-uranus"
+    internal-img="planet-uranus-internal"
+    rotation-days="17.2"
+    rev-time="84"
+    radius="25,362"
+    avg-temp="-195"
   ></Planet>
 </template>
 

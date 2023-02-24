@@ -11,6 +11,12 @@ const { neptune } = storeToRefs(usePlanetStore());
     :planet="neptune"
     bg-color="bg-blue"
     wiki-link="https://en.wikipedia.org/wiki/Neptune"
+    overview-img="planet-neptune"
+    internal-img="planet-neptune-internal"
+    rotation-days="16.08"
+    rev-time="164.79"
+    radius="24,622"
+    avg-temp="-201"
   ></Planet>
 </template>
 
