@@ -76,8 +76,6 @@ export const usePlanetStore = defineStore("planet", () => {
       throw Error(res.statusText);
     }
     let sections = res.data.remaining.sections;
-    console.log("sections");
-    console.log(sections);
     for (const section of sections) {
       if (
         section.anchor == "Surface_geology" ||
