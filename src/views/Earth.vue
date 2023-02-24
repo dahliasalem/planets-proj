@@ -7,7 +7,11 @@ const { earth } = storeToRefs(usePlanetStore());
 </script>
 
 <template>
-  <Planet :planet="earth" bg-color="bg-blue"></Planet>
+  <Planet
+    :planet="earth"
+    bg-color="bg-blue"
+    wiki-link="https://en.wikipedia.org/wiki/Earth"
+  ></Planet>
 </template>
 
 <style scoped></style>

@@ -7,6 +7,7 @@ const props = withDefaults(
   defineProps<{
     planet: any;
     bgColor: string;
+    wikiLink: string;
   }>(),
   {}
 );
@@ -16,7 +17,7 @@ function getImage() {
   if (route.hash == "#structure") {
     image = props.planet.image.structure;
   }
-  const imgUrl = new URL(`/src/assets/${image}.svg`, import.meta.url).href
+  const imgUrl = new URL(`/src/assets/${image}.svg`, import.meta.url).href;
   return imgUrl;
 }
 
@@ -82,7 +83,7 @@ function isSelected(hash: string) {
         <div class="mx-auto w-full grow p-24 sm:p-10">
           <img
             :src="getImage()"
-            class="mx-auto sm:max-w-md lg:max-w-xl z-0"
+            class="z-0 mx-auto sm:max-w-md lg:max-w-xl"
             alt="planet image"
           />
         </div>
@@ -103,7 +104,12 @@ function isSelected(hash: string) {
               {{ getDisplayText() }}
             </span>
             <div class="mb-6 flex flex-row items-center">
-              <span class="cursor-pointer pr-3 text-base">Source: Wiki</span>
+              <a
+                class="cursor-pointer pr-3 text-base"
+                :href="$props.wikiLink"
+                target="_blank"
+                >Source: Wiki</a
+              >
               <img
                 src="@/assets/icon-source.svg"
                 class="h-3 w-3"

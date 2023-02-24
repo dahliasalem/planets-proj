@@ -7,7 +7,11 @@ const { venus } = storeToRefs(usePlanetStore());
 </script>
 
 <template>
-  <Planet :planet="venus" bg-color="bg-yellow"></Planet>
+  <Planet
+    :planet="venus"
+    bg-color="bg-yellow"
+    wiki-link="https://en.wikipedia.org/wiki/Venus"
+  ></Planet>
 </template>
 
 <style scoped></style>

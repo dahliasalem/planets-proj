@@ -7,7 +7,11 @@ const { neptune } = storeToRefs(usePlanetStore());
 </script>
 
 <template>
-  <Planet :planet="neptune" bg-color="bg-blue"></Planet>
+  <Planet
+    :planet="neptune"
+    bg-color="bg-blue"
+    wiki-link="https://en.wikipedia.org/wiki/Neptune"
+  ></Planet>
 </template>
 
 <style scoped></style>
