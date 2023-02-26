@@ -6,7 +6,7 @@ Mobile friendly, and queries all data from the Wikipedia API.
 **LIVE DEMO:** <a href="https://planets-proj.vercel.app/" target="_blank">https://planets-proj.vercel.app/</a>
 
 
-* **Developr Tools:** <a href="https://code.visualstudio.com/" target="_blank">VSCODE</a>, <a href="https://git-scm.com/" target="_blank">git</a>, <a href="https://github.com/" target="_blank">github</a>, <a href="https://ubuntu.com/tutorials/command-line-for-beginners#1-overview" target="_blank">Linux CLI</a>, <a href="https://www.gnu.org/software/bash/" target="_blank">bash</a>, <a href="https://www.npmjs.com/" target="_blank">npm</a>, <a href="https://eslint.org/" target="_blank">eslint</a>, <a href="https://prettier.io/" target="_blank">Prettier</a>
+* **Development Tools:** <a href="https://code.visualstudio.com/" target="_blank">VSCODE</a>, <a href="https://git-scm.com/" target="_blank">git</a>, <a href="https://github.com/" target="_blank">github</a>, <a href="https://ubuntu.com/tutorials/command-line-for-beginners#1-overview" target="_blank">Linux CLI</a>, <a href="https://www.gnu.org/software/bash/" target="_blank">bash</a>, <a href="https://www.npmjs.com/" target="_blank">npm</a>, <a href="https://eslint.org/" target="_blank">eslint</a>, <a href="https://prettier.io/" target="_blank">Prettier</a>
 
 * **Frameworks & Languges:** <a href="https://vuejs.org/" target="_blank">Vue js 3</a> (<a href="https://vuejs.org/guide/extras/composition-api-faq.html" target="_blank">Compositions API</a>), <a href="https://www.typescriptlang.org/" target="_blank">Typescript</a>, <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox</a>, <a href="https://nodejs.org/en/" target="_blank">Node js</a>
 
