@@ -8,9 +8,9 @@ Mobile friendly, and queries all data from the Wikipedia API.
 
 * **Developr Tools:** <a href="https://code.visualstudio.com/" target="_blank">VSCODE</a>, <a href="https://git-scm.com/" target="_blank">git</a>, <a href="https://github.com/" target="_blank">github</a>, <a href="https://ubuntu.com/tutorials/command-line-for-beginners#1-overview" target="_blank">Linux CLI</a>, <a href="https://www.gnu.org/software/bash/" target="_blank">bash</a>, <a href="https://www.npmjs.com/" target="_blank">npm</a>, <a href="https://eslint.org/" target="_blank">eslint</a>, <a href="https://prettier.io/" target="_blank">Prettier</a>
 
-* **Frameworks & Languges:** Vue.js 3 (Compositions API), Typescript, Flex CSS, Node js
+* **Frameworks & Languges:** <a href="https://vuejs.org/" target="_blank">Vue js 3</a> (<a href="https://vuejs.org/guide/extras/composition-api-faq.html" target="_blank">Compositions API</a>), <a href="https://www.typescriptlang.org/" target="_blank">Typescript</a>, <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox</a>, <a href="https://nodejs.org/en/" target="_blank">Node js</a>
 
-* **Libraries & APIs:** Tailwindcss, Vue Router, Axios, Vite, postcss, cheerios, Pinia, Wikipedia REST API, Vercel
+* **Libraries & APIs:** <a href="https://tailwindcss.com/docs/installation" target="_blank">Tailwindcss</a>, <a href="https://router.vuejs.org/" target="_blank">Vue Router</a>, <a href="https://axios-http.com/" target="_blank">Axios</a>, <a href="https://vitejs.dev/" target="_blank">Vite</a>, <a href="https://postcss.org/" target="_blank">postcss</a>, <a href="https://cheerio.js.org/" target="_blank">Cheerio</a>, <a href="https://pinia.vuejs.org/" target="_blank">Pinia</a>, <a href="https://en.wikipedia.org/api/rest_v1/#/" target="_blank">Wikipedia REST API</a>, <a href="https://vercel.com" target="_blank">Vercel</a>
 
 ## Features
 
