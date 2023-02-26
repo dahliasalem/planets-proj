@@ -6,11 +6,11 @@ Mobile friendly, and queries all data from the Wikipedia API.
 **LIVE DEMO:** <a href="https://planets-proj.vercel.app/" target="_blank">https://planets-proj.vercel.app/</a>
 
 
-Developr Tools: VSCODE, git, github, linux terminal, bash, npm, eslint, Prettier
+* **Developr Tools:** <a href="https://code.visualstudio.com/" target="_blank">VSCODE</a>, <a href="https://git-scm.com/" target="_blank">git</a>, <a href="https://github.com/" target="_blank">github</a>, <a href="https://ubuntu.com/tutorials/command-line-for-beginners#1-overview" target="_blank">Linux CLI</a>, <a href="https://www.gnu.org/software/bash/" target="_blank">bash</a>, <a href="https://www.npmjs.com/" target="_blank">npm</a>, <a href="https://eslint.org/" target="_blank">eslint</a>, <a href="https://prettier.io/" target="_blank">Prettier</a>
 
-Frameworks & Languges: Vue.js 3 (Compositions API), Typescript, Flex CSS, Node js
+* **Frameworks & Languges:** Vue.js 3 (Compositions API), Typescript, Flex CSS, Node js
 
-Libraries & APIs: Tailwindcss, Vue Router, Axios, Vite, postcss, cheerios, Pinia, Wikipedia REST API, Vercel
+* **Libraries & APIs:** Tailwindcss, Vue Router, Axios, Vite, postcss, cheerios, Pinia, Wikipedia REST API, Vercel
 
 ## Features
 
