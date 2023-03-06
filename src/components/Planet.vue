@@ -61,7 +61,7 @@ function isSelected(hash: string) {
 </script>
 
 <template>
-  <div class="flex grow flex-col">
+  <div class="flex grow flex-col fade-in">
     <div class="images-and-text flex flex-col lg:grow lg:flex-row">
       <nav
         class="flex flex-row items-center justify-around border-b border-white border-opacity-20 py-3 px-4 uppercase sm:hidden"
@@ -109,7 +109,7 @@ function isSelected(hash: string) {
             <span class="mb-4 font-antonio text-4xl uppercase lg:text-8xl">
               {{ route.name }}
             </span>
-            <span class="mb-7 text-base transition delay-150 ease-in-out">
+            <span class="mb-7 text-base fade-in">
               {{ displayText }}
             </span>
             <div class="mb-6 flex flex-row items-center">

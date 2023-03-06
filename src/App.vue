@@ -12,7 +12,7 @@ onMounted(async () => {
 
 <template>
   <div
-    class="stars flex min-h-full w-full flex-col bg-navy bg-cover bg-no-repeat text-base font-bold text-white"
+    class="stars flex min-h-full w-full flex-col bg-navy bg-cover bg-no-repeat text-base font-bold text-white fade-in"
   >
     <NavBar class="" />
     <router-view></router-view>
@@ -23,4 +23,5 @@ onMounted(async () => {
 .stars {
   background-image: url("@/assets/background-stars.svg");
 }
+
 </style>
